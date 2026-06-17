@@ -1,0 +1,41 @@
+# SQLite Databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.wal
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+Active.activate
+direnv/
+
+# FastAPI / Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+secrets.json
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
