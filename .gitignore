@@ -1,19 +1,24 @@
-# SQLite Databases
-*.sqlite
+# === SQLite Database ===
+# Ignores the local SQLite database files so you don't accidentally commit your data
 *.sqlite3
 *.db
 *.db-journal
-*.wal
+*.db-wal
 
-# Virtual Environment
+# === Virtual Environments ===
+# Prevents committing your local Python dependencies
 .venv/
 venv/
 env/
 ENV/
-Active.activate
-direnv/
 
-# FastAPI / Python bytecode
+# === Environment Variables / Secrets ===
+# Crucial: Never commit your secrets, tokens, or local settings
+.env
+.env.*
+!.env.example
+
+# === Python Cache & Build Artifacts ===
 __pycache__/
 *.py[cod]
 *$py.class
@@ -21,21 +26,8 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
-# Environment Variables & Secrets
-.env
-.env.*
-!.env.example
-secrets.json
-
-# IDEs and Editors
+# === IDEs and System Files ===
 .vscode/
 .idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.swp
-
-# OS generated files
 .DS_Store
 Thumbs.db
