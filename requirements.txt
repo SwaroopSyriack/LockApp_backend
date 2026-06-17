@@ -1,0 +1,12 @@
+dotenv            
+fastapi           
+pydantic          
+pydantic-settings
+bcrypt
+PyJWT 
+pwdlib 
+argon2-cffi 
+uvicorn
+sqlalchemy
+python-multipart
+
