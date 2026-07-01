@@ -15,7 +15,7 @@ def create_user(* , db : Session ,user_create):
     return user_create
 
 
-def authenticate(* , db : Session , email : str , passwd : str) -> User | None:
+def authenticate(* , db : Session , email : str , passwd : str):
     db_user = get_user_by_email(db = db , email = email)
     if not db_user:
         password_verify(passwd , DUMMY_HASH)
@@ -28,7 +28,7 @@ def authenticate(* , db : Session , email : str , passwd : str) -> User | None:
 
 
 
-def get_user_by_email(* , db : Session , email : str) -> User | None:
+def get_user_by_email(* , db : Session , email : str):
     return db.query(User).filter(User.email == email).first()
 
 
