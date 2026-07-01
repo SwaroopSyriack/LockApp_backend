@@ -18,7 +18,7 @@ password_hash = PasswordHash(
 
 ALGORITHM = "HS256"
 
-def create_acess_token(data : dict | Any , expires_delta : Optional[timedelta] = None):
+def create_acess_token(data : Any , expires_delta : Optional[timedelta] = None):
     expire = datetime.now(timezone.utc) + (expires_delta or timedelta(minutes=15))
     to_encode = data.copy() 
     to_encode.update({"exp": expire})
