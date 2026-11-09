@@ -203,9 +203,4 @@ Column types are mapped to SQLite storage types:
 | `DECIMAL`, `NUMERIC` | `NUMERIC` |
 | `BLOB` | `BLOB` |
 
-## Roadmap
 
-- Require authentication on the `/tables` routes and on `POST /admin`
-- Block login for inactive users
-- Rehash passwords automatically when a stronger algorithm is available
-- Support databases other than SQLite
